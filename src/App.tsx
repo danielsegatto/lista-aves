@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Listas/Listas';
+import Home from './pages/Lists/Lists';
 
 import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';

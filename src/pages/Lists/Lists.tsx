@@ -4,7 +4,7 @@ import {
   IonIcon  } from '@ionic/react';
 import React, { Component } from 'react';
 import './style.css'
-import Lista from '../../components/Lista/Lista'
+import Lista from '../../components/CardList/CardList'
 
 interface RouteComponentProps {
   history: any
@@ -56,15 +56,23 @@ class Listas extends Component<RouteComponentProps> {
 				local: "Linhares"
 			}
     	]
-  	}
+	}
+
+	animationHeader(currentY: number) {
+		console.log(currentY)
+	}
 
   render() {
     return (
       <IonPage>
-			<IonContent color="light">
-				<div className="divHeader">
+			<IonContent
+				color="light"
+				scrollEvents={true}
+    			onIonScroll={(e) => this.animationHeader(e.detail.currentY)}
+			>
+				<div className="divHeader" id="oi">
 					<IonIcon name="menu" className="iconHeader"></IonIcon>
-					<h1 className="titleListas">Listas</h1>
+					<span className="titleListas">Listas</span>
 					<IonIcon name="search" className="iconHeader"></IonIcon>
 				</div>
 				<div className="listas">

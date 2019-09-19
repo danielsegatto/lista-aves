@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+}
+.divHeader {
+	width: 100%;
+	height: 130px;
+	background: #28A956;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 25px	20px 20px 20px;
+	position: fixed;
+}
+.titleListas {
+	color: #fff;
+	font-size: 22pt;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+.iconHeader {
+	color: #fff;
+	font-size: 24pt;
+}
+.listas {
+	position: relative;
+	top: 80px;
+	margin: 0 20px 0 20px;
+}
