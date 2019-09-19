@@ -7,6 +7,7 @@ interface props {
 }
 
 class Lista extends Component<props> {
+
 	render() {
 		return (
 			<div className="list">
@@ -14,7 +15,7 @@ class Lista extends Component<props> {
 					<span className="titleList">
 						{this.props.lista.nome}
 					</span>
-					<img src="assets/icon/more.svg" alt="more"/>
+					<img src="assets\icon\more.svg" alt="more"/>
 				</div>
 				<div>
 					<span className="textList">
@@ -23,12 +24,12 @@ class Lista extends Component<props> {
 				</div>
 				<div className="info">
 					<div className="infoList">
-						<img src="assets/icon/bird.svg" className="iconList"/>
-						<span className="textInfo">23 registros</span>
+						<img src="assets/icon/bird.svg" className="iconList" alt="bird"/>
+						<span className="textInfo textList">{this.props.lista.registros} registros</span>
 					</div>
 					<div className="infoList">
-						<span className="textInfo">Três Lagoas</span>
-						<img src="assets/icon/local.svg" className="iconList"/>
+						<span className="textInfo textList">{this.props.lista.local}</span>
+						<img src="assets/icon/local.svg" className="iconList" alt="location"/>
 					</div>
 				</div>
 			</div>

@@ -13,7 +13,8 @@
 .titleListas {
     color: #fff;
     font-size: 24pt;
-    font-family: 'Montserrat Alternates';
+	font-family: 'Work Sans', sans-serif;
+	/* font-family: 'Montserrat Alternates'; */
     font-weight: bold;
     margin: 0;
     padding: 0;

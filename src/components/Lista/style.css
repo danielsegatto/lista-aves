@@ -13,13 +13,18 @@
 .titleList {
 	color: #000;
 	font-size: 16pt;
-	font-family: 'Montserrat Alternates';
-	font-weight: bold;
+	font-family: 'Work Sans', sans-serif;
+
+	font-weight: 700;
+}
+.more {
+	background: rebeccapurple;
 }
 .textList {
 	color: #515151;
-	font-size: 14pt;
-	font-family: 'Ikaros Sans';
+	font-size: 12pt;
+	font-weight: 500;
+	font-family: 'Muli', sans-serif;
 }
 .info {
 	margin-top: 20px;
@@ -31,7 +36,4 @@
 }
 .textInfo {
 	margin: 0 4px 0 4px;
-	font-size: 14pt;
-	color: #515151;
-	font-family: 'Ikaros Sans';
 }

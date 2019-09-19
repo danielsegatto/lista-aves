@@ -4,13 +4,13 @@ import {
   IonIcon  } from '@ionic/react';
 import React, { Component } from 'react';
 import './style.css'
-import Lista from './components/Lista/Lista'
+import Lista from '../../components/Lista/Lista'
 
 interface RouteComponentProps {
   history: any
 }
 
-class Home extends Component<RouteComponentProps> {
+class Listas extends Component<RouteComponentProps> {
   	state = {
     	listas: [
 			{
@@ -76,4 +76,4 @@ class Home extends Component<RouteComponentProps> {
   	}
 };
 
-export default Home;
+export default Listas;
