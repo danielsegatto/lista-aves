@@ -4,7 +4,7 @@
 	border-radius: 5px;
 	margin-bottom: 10px;
 	box-shadow: 1px 2px 3px rgba(0, 0, 0, .4);
-	padding: 16px;
+	padding: 14px;
 }
 .list div {
     display: flex;
@@ -12,18 +12,15 @@
 }
 .titleList {
 	color: #000;
-	font-size: 16pt;
+	font-size: 15pt;
 	font-family: 'Work Sans', sans-serif;
-
-	font-weight: 700;
 }
 .more {
 	background: rebeccapurple;
 }
 .textList {
 	color: #515151;
-	font-size: 12pt;
-	font-weight: 500;
+	font-size: 11pt;
 	font-family: 'Muli', sans-serif;
 }
 .info {
@@ -35,5 +32,5 @@
 	align-items: center;
 }
 .textInfo {
-	margin: 0 4px 0 4px;
+	margin: 0 2px 0 2px;
 }
