@@ -68,17 +68,22 @@ class Listas extends Component<RouteComponentProps> {
 
 	animationHeader(currentY: number) {
 		let divHeader = document.getElementsByClassName('divHeader') as HTMLCollectionOf<HTMLElement>
+		let itensList = divHeader[0].children as HTMLCollectionOf<HTMLElement>
 		if (currentY > 5) {
 			divHeader[0].className = 'divHeader divHeaderAnimate'
-			divHeader[0].children[0].className = 'iconHeader md hydrated itensHeaderAnimate1'
-			divHeader[0].children[1].className = 'titleListas itensHeaderAnimate1'
-			divHeader[0].children[2].className = 'iconHeader md hydrated itensHeaderAnimate1'
 		}
 		else {
 			divHeader[0].className = 'divHeader'
-			divHeader[0].children[0].className = 'iconHeader md hydrated'
-			divHeader[0].children[1].className = 'titleListas'
-			divHeader[0].children[2].className = 'iconHeader md hydrated'
+		}
+		if (currentY >= 42) {
+			itensList[0].style.opacity = '0'
+			itensList[1].style.opacity = '0'
+			itensList[2].style.opacity = '0'
+		}
+		else {
+			itensList[0].style.opacity = '1'
+			itensList[1].style.opacity = '1'
+			itensList[2].style.opacity = '1'
 		}
 	}
 

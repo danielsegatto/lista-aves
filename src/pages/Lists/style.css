@@ -3,7 +3,7 @@
 }
 .divHeader {
 	width: 100%;
-	background: #28A956;
+	background: #3cb371;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -21,15 +21,10 @@
 	font-weight: bold;
 	margin: 0;
 	padding: 0;
-	animation: itensHeader2 .5s forwards;
 }
 .iconHeader {
 	color: #fff;
 	font-size: 24pt;
-	animation: itensHeader2 .3s forwards;
-}
-.itensHeaderAnimate1 {
-	animation: itensHeader1 1s forwards;
 }
 .listas {
 	position: relative;
@@ -39,13 +34,9 @@
 @keyframes animate1 {
 	0% {
 		padding: 25px 20px 80px 20px;
-		font-size: 22pt;
-		color: #fff;
 	}
 	100% {
 		padding: 35px 30px 120px 30px;
-		font-size: 16pt;
-		color: #28A956;
 	}
 }
 @keyframes animate2 {
@@ -56,23 +47,5 @@
 	100% {
 		padding: 25px 20px 80px 20px;
 
-	}
-}
-@keyframes itensHeader1 {
-	0% {
-		color: #fff;
-
-	}
-	100% {
-		color: #28A956;
-	}
-}
-@keyframes itensHeader2 {
-	0% {
-		color: #28A956;
-
-	}
-	100% {
-		color: #fff;
 	}
 }
