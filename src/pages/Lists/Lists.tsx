@@ -54,34 +54,54 @@ class Listas extends Component<RouteComponentProps> {
 				hora: "07:30",
 				registros: "40",
 				local: "Linhares"
+			},
+			{
+				nome: "F02",
+				data: "20/08/2019",
+				hora: "07:30",
+				registros: "40",
+				local: "Linhares"
 			}
-    	]
+
+		]
 	}
 
 	animationHeader(currentY: number) {
-		console.log(currentY)
+		let divHeader = document.getElementsByClassName('divHeader') as HTMLCollectionOf<HTMLElement>
+		if (currentY > 5) {
+			divHeader[0].className = 'divHeader divHeaderAnimate'
+			divHeader[0].children[0].className = 'iconHeader md hydrated itensHeaderAnimate1'
+			divHeader[0].children[1].className = 'titleListas itensHeaderAnimate1'
+			divHeader[0].children[2].className = 'iconHeader md hydrated itensHeaderAnimate1'
+		}
+		else {
+			divHeader[0].className = 'divHeader'
+			divHeader[0].children[0].className = 'iconHeader md hydrated'
+			divHeader[0].children[1].className = 'titleListas'
+			divHeader[0].children[2].className = 'iconHeader md hydrated'
+		}
 	}
 
-  render() {
-    return (
-      <IonPage>
-			<IonContent
-				color="light"
-				scrollEvents={true}
-    			onIonScroll={(e) => this.animationHeader(e.detail.currentY)}
-			>
-				<div className="divHeader" id="oi">
-					<IonIcon name="menu" className="iconHeader"></IonIcon>
-					<span className="titleListas">Listas</span>
-					<IonIcon name="search" className="iconHeader"></IonIcon>
-				</div>
-				<div className="listas">
-					{this.state.listas.map(lista => <Lista key={lista.nome + lista.data} lista={lista} />)}
-				</div>
-			</IonContent>
-      </IonPage>
-    	);
-  	}
+	render() {
+		return (
+			<IonPage>
+					<IonContent
+						color="light"
+						scrollEvents={true}
+						onIonScroll={(e) => this.animationHeader(e.detail.currentY)}
+					>
+						<div className="divHeader">
+							<IonIcon name="menu" className="iconHeader"></IonIcon>
+							<span className="titleListas">Listas</span>
+							<IonIcon name="search" className="iconHeader"></IonIcon>
+						</div>
+						<div className="listas">
+							{this.state.listas.map(lista => <Lista key={lista.nome + lista.data} lista={lista} />)}
+						</div>
+					</IonContent>
+			</IonPage>
+			);
+		}
 };
 
 export default Listas;
