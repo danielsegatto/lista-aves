@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Lists/Lists';
+import React from 'react';
+import { IonApp, IonPage } from '@ionic/react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Lists from './containers/Lists';
 
 import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';
@@ -17,19 +16,18 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './theme/fonts.scss';
 
-class App extends Component {
-  render() {
-    return (
+const App = () => (
+  <Router>
       <IonApp>
-        <IonReactRouter>
-          <IonRouterOutlet>
-            <Route path="/home" component={Home} exact={true} />
-            <Route exact path="/" render={() => <Redirect to="/home" />} />
-          </IonRouterOutlet>
-        </IonReactRouter>
+          <IonPage id="main">
+            <Switch>
+              <Route exact path="/" component={Lists}></Route>
+              <Route path="/app" component={() => <h1>App</h1>}></Route>
+            </Switch>
+          </IonPage>
       </IonApp>
-    );
-  }
-}
+  </Router>
+);
+
 
 export default App;
