@@ -5,11 +5,22 @@
 	width: 100%;
 	background: #3cb371;
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
+	flex-direction: column;
 	padding: 25px 20px 80px 20px;
 	position: fixed;
 	animation: animate2 1s forwards;
+	div {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	> span {
+		display: inline-block;
+		color: #fff;
+		font-family: 'Muli', sans-serif;
+		font-size: 14pt;
+		margin: 10px 4px;
+	}
 }
 .divHeaderAnimate {
 	animation: animate1 1s forwards;
@@ -26,9 +37,13 @@
 	color: #fff;
 	font-size: 24pt;
 }
+.iconHeaderHidden {
+	font-size: 24pt;
+	opacity: 0;
+}
 .listas {
 	position: relative;
-	top: 80px;
+	top: 100px;
 	margin: 0 20px 30px 20px;
 }
 @keyframes animate1 {

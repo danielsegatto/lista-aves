@@ -1,24 +1,15 @@
 import React from 'react';
-import './CardList.scss'
-
-// interface Props {
-// 	lista: {
-// 		nome: string
-// 		data: string
-// 		hora: string
-// 		registros: number
-// 		local: string
-// 	}
-// }
+import '../styleCards.scss'
 
 const CardList = (props: any) => {
+
 	return (
-		<div className="list">
+		<div className="list" onClick={props.click}>
 			<div>
 				<span className="titleList">
 					{props.lista.nome}
 				</span>
-				<img src="assets\icon\more.svg" alt="more"/>
+				<img src="assets\icon\more.svg" alt="more" onClick={() => console.log("click more")}/>
 			</div>
 			<div>
 				<span className="textList">
