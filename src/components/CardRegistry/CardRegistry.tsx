@@ -9,7 +9,7 @@ const CardResgistry = () => {
 				<img src="assets\icon\more.svg" alt="more"/>
 			</div>
 			<span className="nameRegistry">Tangara desmaresti</span>
-			<span className="textRegistry">A | B | C | D | E | F</span>
+			<span className="textRegistry">A - B - C - D - E - F</span>
 		</div>
 	);
 }

@@ -1,27 +1,30 @@
 import React, { Component } from 'react';
 import { IonPage, IonContent, IonIcon } from "@ionic/react";
-import '../../theme/style.scss'
 import { Link } from 'react-router-dom';
+
+import '../style.scss'
 import CardResgistry from '../../components/CardRegistry/CardRegistry';
 
 export default class List extends Component {
-
 	animationHeader(currentY: number) {
       let divHeader = document.getElementsByClassName('divHeader') as HTMLCollectionOf<HTMLElement>
-      let itensList = divHeader[0].children as HTMLCollectionOf<HTMLElement>
-      if (currentY > 5) {
+		if (currentY > 5) {
          divHeader[0].className = 'divHeader divHeaderAnimate'
       }
-      else {
-         divHeader[0].className = 'divHeader'
+      else if (divHeader[0].className === 'divHeader divHeaderAnimate'){
+         divHeader[0].className = 'divHeader divHeaderAnimate2'
+		}
+      if (currentY >= 62) {
+			let div = divHeader[0].children[0] as HTMLElement
+			let span = divHeader[0].children[1] as HTMLElement
+			div.style.opacity = '0'
+			span.style.opacity = '0'
       }
-      if (currentY >= 42) {
-         itensList[0].style.opacity = '0'
-         itensList[1].style.opacity = '0'
-      }
       else {
-         itensList[0].style.opacity = '1'
-         itensList[1].style.opacity = '1'
+			let div = divHeader[0].children[0] as HTMLElement
+			let span = divHeader[0].children[1] as HTMLElement
+			div.style.opacity = '1'
+			span.style.opacity = '1'
 		}
 	}
 

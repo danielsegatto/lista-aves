@@ -8,7 +8,6 @@
 	flex-direction: column;
 	padding: 25px 20px 80px 20px;
 	position: fixed;
-	animation: animate2 1s forwards;
 	div {
 		display: flex;
 		justify-content: space-between;
@@ -24,6 +23,9 @@
 }
 .divHeaderAnimate {
 	animation: animate1 1s forwards;
+}
+.divHeaderAnimate2 {
+	animation: animate2 1s forwards;
 }
 .titleListas {
 	color: #fff;

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styleCards.scss'
 
-const CardList = (props: any) => {
+export default function CardList(props: any) {
 
 	return (
 		<div className="list" onClick={props.click}>
@@ -29,5 +29,3 @@ const CardList = (props: any) => {
 		</div>
 	);
 }
-
-export default CardList;
